@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Smart Factory Predictive Maintenance</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Predictive Maintenance Dashboard</h1>
+        <p class="subtitle">Live simulation of RUL prediction and risk status from turbofan sensor data</p>
+    </header>
+
+    <main>
+        <section class="controls">
+            <label for="engine-select">Equipment</label>
+            <select id="engine-select"></select>
+            <button id="play-btn">Start Simulation</button>
+            <button id="reset-btn">Reset</button>
+            <span id="cycle-label">Cycle: -</span>
+        </section>
+
+        <section class="status-panel">
+            <div class="status-card">
+                <div class="status-label">Predicted RUL</div>
+                <div id="rul-value" class="status-value">--</div>
+                <div class="status-unit">cycles remaining</div>
+            </div>
+            <div class="status-card">
+                <div class="status-label">Risk Status</div>
+                <div id="risk-badge" class="risk-badge healthy">HEALTHY</div>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <canvas id="rul-chart" width="900" height="300"></canvas>
+        </section>
+
+        <section class="legend">
+            <span><i class="dot critical"></i> Critical (RUL &lt; 20)</span>
+            <span><i class="dot warning"></i> Warning (RUL &lt; 50)</span>
+            <span><i class="dot healthy"></i> Healthy</span>
+        </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
