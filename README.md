@@ -5,7 +5,7 @@ readings and classifies it into a **risk band (healthy / warning /
 critical)**, served through a FastAPI backend with a live simulation
 dashboard.
 
-**Live Demo:** **Live Demo:** [https://predictive-maintenance-zshu.onrender.com](https://predictive-maintenance-zshu.onrender.com)
+**Live Demo:** [https://predictive-maintenance-zshu.onrender.com](https://predictive-maintenance-zshu.onrender.com)
 
 ## Problem
 
